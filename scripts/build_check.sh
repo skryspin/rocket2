@@ -2,5 +2,5 @@
 set -euxo pipefail
 pipenv run pycodestyle .
 pipenv run pydocstyle .
-mdl .
+pipenv run markdownlint .
 pipenv run pytest tests/

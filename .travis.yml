@@ -4,10 +4,9 @@ python:
 install:
     - pip install pipenv
     - pipenv install --dev
-    - gem install mdl
 script:
     - pipenv run pycodestyle .
     - pipenv run pydocstyle .
-    - mdl .
+    - pipenv run markdownlint .
     - cd tests/ && pipenv run pytest --cov=./
     - pipenv run codecov
