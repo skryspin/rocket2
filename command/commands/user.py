@@ -56,7 +56,7 @@ class UserCommand:
         return self.__command_name
 
     def get_help(self):
-        """Return command options for user events."""
+        """Returnn command options for user events."""
         return self.__help
 
     def handle(self, command):
