@@ -28,3 +28,18 @@ class Core:
                 return 1
             except KeyError:
                 return -1
+
+    def handle_github_event(self, event_data):
+        """Handle Github events."""
+        switch = {
+            "member": self.__member_helper
+        }
+        event_type = ""
+        handle = switch.get(event_type)
+        if handle:
+            handle(event_data)
+            return 1
+        return 0
+
+    def __member_helper(self, event_data):
+        return
